@@ -1,3 +1,7 @@
+body {
+    background-color: aqua;
+    margin: auto 60px;
+}
 h1 {
     font-size: ;
     font-family: ;
@@ -34,4 +38,24 @@ p {
     background-color: ;
     height: ;
     width: ;
+}
+
+.nerko-one-regular {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+  }
+  
+
+.matemasie-regular {
+    font-family: "Matemasie", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+  }
+  
+  img {
+    width: 300px;
+ height: 300px; 
 }
