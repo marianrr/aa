@@ -14,8 +14,8 @@ console.log(removeEWords('Enter the building')); // 'building'
 
 let removeEWords = function(sentence) {
     // Your code here
-
-return sentence.filter(word => word.includes("e") == 0)
+let arr = sentence.split(" ")
+return arr.filter(word => word.includes("e") == 0).join(" ")
 
 
 
