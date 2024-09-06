@@ -29,6 +29,11 @@ appleCounter(obj3); // => 3
 ***********************************************************************/
 
 function appleCounter(appleObj) {
+debugger
+// map method
+let num = Object.keys(appleObj).filter( key => key.toLowerCase().includes("apple")).length
+return num
+
   // Your code here
 }
 
