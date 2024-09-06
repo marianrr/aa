@@ -13,15 +13,32 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 
 function arrayConverter(array) {
 
+return array.reduce((obj, num) => {
+  let i = 0
+if(!Object.keys(obj).includes(num)) {
+  obj[num] = 1
+  return obj 
+}
+else {
+  obj[num]++
+  return obj
+}
+
+
+}, {})
 
 
 
 
 
 
-  
   // Your code here
 }
+
+
+
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = arrayConverter;
