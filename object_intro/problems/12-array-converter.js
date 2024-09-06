@@ -12,6 +12,14 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 ***********************************************************************/
 
 function arrayConverter(array) {
+
+
+
+
+
+
+
+  
   // Your code here
 }
 

@@ -10,8 +10,15 @@ restSum(0); // => 0
 ***********************************************************************/
 
 function restSum(...otherNums) {
+
+let a = [...otherNums]
+//debugger
+
+return a.reduce((sum, num) => sum+num, 0)
+
   // Your code here
 }
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = restSum;
