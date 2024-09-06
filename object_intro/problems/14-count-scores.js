@@ -28,7 +28,26 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
 function countScores(people) {
-  // Your code here
+
+return people.reduce((objFinal, obj) => {
+
+if(!Object.keys(objFinal).includes(obj.name)) {
+
+  objFinal = {...objFinal, obj}
+  return objFinal
+}
+else {
+  objFinal = {...{objFinal[name]: obj.score+= }}
+  return objFinal
+}
+
+}, {})
+
+
+
+
+
+
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

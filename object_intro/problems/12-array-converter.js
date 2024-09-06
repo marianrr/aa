@@ -23,15 +23,7 @@ else {
   obj[num]++
   return obj
 }
-
-
 }, {})
-
-
-
-
-
-
   // Your code here
 }
 

@@ -12,6 +12,19 @@ console.log(stringConverter("raccoon")); // => {r: 1, a: 1, c: 2, o: 2, n: 1}
 ***********************************************************************/
 
 function stringConverter(string) {
+
+return string.split("").reduce((obj, char) => {
+
+  if(!Object.keys(obj).includes(char)) {
+    obj[char] = 1
+  return obj
+  }
+else {
+  obj[char]++
+  return obj
+}
+}, {})
+
   // Your code here
 }
 
