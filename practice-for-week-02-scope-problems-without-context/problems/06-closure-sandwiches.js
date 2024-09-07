@@ -17,7 +17,10 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
-function sandwichMaker() {
+const sandwichMaker = (ingredient) => {
+let a = `One sandwich with tomato and spinach`
+const func2 = () => + `and ${ingredient}`
+func2()
   // Your code here
 }
 
