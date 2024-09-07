@@ -16,6 +16,10 @@ arrowGetFullName(p2); // => 'Charlie Brown'
 
 // Your code here
 
+const arrowGetFullName = (person) => Object.values(person).slice(0,2).join(" ")
+
+
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = arrowGetFullName;
