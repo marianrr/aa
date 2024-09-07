@@ -4,7 +4,18 @@ The function should call the callback for each element of the array, passing in
 the element and its index. The function should return a boolean
 indicating whether or not at least one element of the array returns true when passed
 into the callback.
+*/
 
+
+let mySome = function() {
+
+};
+
+
+
+
+
+/*
 Examples:
 
 let result1 = mySome([5, 1, 7, 9], function(ele, i) {
@@ -23,9 +34,7 @@ let result3 = mySome(['soup', 'noodles', 'bike', 'ship'], function(ele) {
 console.log(result3);   // true
 *******************************************************************************/
 
-let mySome = function() {
 
-};
 
 
 
