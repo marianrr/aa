@@ -8,36 +8,18 @@ In other words,
     - the second element should be passed to callback 2
     - the third element should be passed to callback 1
     - the fourth element should be passed to callback 2
-    - ... and so on
-
-Examples:
-
-let triple = function (n) {
-    return 3 * n;
-};
-
-let half = function (n) {
-    return n / 2;
-};
-console.log(alternatingMap([7, 3, 2, 9, 8], triple, half));
-// [ 21, 1.5, 6, 4.5, 24 ]
+    - ... and so on*/
 
 
-let yell = function (s) {
-    return s.toUpperCase() + '!';
-};
-
-let whisper = function (s) {
-    return '..' + s.toLowerCase() + '..';
-};
-console.log(alternatingMap(['hEy', 'EVERYone', 'whats', 'uP??'], yell, whisper));
-// [ 'HEY!', '..everyone..', 'WHATS!', '..up??..' ]
-
-*******************************************************************************/
+let alternatingMap = function(arr, cb1, cb2) {
+    let arr2 = []
+for(let i = 0; i < arr.length; i++) {
+    if(i%2 === 0) arr2.push(cb1(arr[i]))
+        else arr2.push(cb2(arr[i]))
+    }
 
 
-let alternatingMap = function() {
-
+return arr2
 };
 
 
