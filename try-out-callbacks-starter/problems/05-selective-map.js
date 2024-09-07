@@ -6,8 +6,22 @@ on the element results in true. If calling the first callback on an element resu
 in false, then the element should not be changed in the new array.
 
 Note that that you cannot use the Array `map` or `filter` methods to solve this
-problem.
+problem.*/
 
+let selectiveMap = function(arr, cb1, cb2) {
+let arr2 = []
+
+for(let i = 0; i < arr.length; i++) {
+    if(cb1(arr[i])) arr2.push(cb2(arr[i]))
+        else arr2.push(arr[i])
+}
+
+
+
+return arr2
+};
+
+/*
 Examples:
 
 function isEven(n) {
@@ -42,9 +56,7 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - How many times are you calling each callback function?
 *******************************************************************************/
 
-let selectiveMap = function() {
 
-};
 
 
 
