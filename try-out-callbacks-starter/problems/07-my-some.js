@@ -7,12 +7,12 @@ into the callback.
 */
 
 
-let mySome = function() {
-
+let mySome = function(arr, cb) {
+for(let i =0; i < arr.length; i++) {
+if(cb(arr[i], i)) return true
+}
+return false
 };
-
-
-
 
 
 /*

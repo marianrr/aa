@@ -2,7 +2,19 @@
 Write a function `count` that accepts an array and a callback as arguments. The
 function should return the number of elements of the array that return true when
 passed to the callback.
+*/
 
+
+let count = function(arr, cb) {
+let num = 0
+for(let i =0; i < arr.length; i++) {
+    if(cb(arr[i])) num++
+}
+return num
+};
+
+
+/*
 Examples:
 
 let result1 = count([18, 5, 32, 7, 100], function (n) {
@@ -26,9 +38,7 @@ let result4 = count(['follow', 'the', 'yellow', 'brick', 'road'], function (str)
 console.log(result4); // 0
 *******************************************************************************/
 
-let count = function() {
 
-};
 
 
 
