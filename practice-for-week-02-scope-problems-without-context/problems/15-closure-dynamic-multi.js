@@ -19,6 +19,19 @@ multiplyByFive(5); // returns 25
 ***********************************************************************/
 
 function dynamicMultiply(num) {
+  let ones= num
+ 
+return function() {
+  one.push(ones)
+ if(one.length === 2)
+  return one[0] * one[1]
+}
+
+
+
+
+
+
   // Your code here
 }
 
