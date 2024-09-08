@@ -28,6 +28,17 @@ Example 4:
 
 ***********************************************************************/
 function countDownTimer(num) {
+  
+if(num > 0) {
+  num--
+  return  func
+}
+else if(num === 0) return "Happy New Year!"
+
+
+
+
+
   // Your code here
 }
 
