@@ -18,13 +18,15 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 const smoothieMachine = (...ingredients) => {
-  // Your code here
+
+return function(...s) {
+return [...ingredients, ...s].join(" ")
+}
 
 
 
 
 
-  
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
