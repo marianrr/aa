@@ -15,13 +15,28 @@ console.log(rudePerson("I like pie")); // prints "I what like what pie"
 Invoking the interrupter function again: 
 let rudePerson2 = interrupter("yo"); // => returns a function
 console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
-
-
 ***********************************************************************/
 
 function interrupter(interruptingWord) {
+  debugger
+return (sentence) => {
+let arr = sentence.split(" ")
+let arr2 = []
+
+for(let i = 0; i < arr.length-1; i++) {
+arr2.push(arr[i], interruptingWord)
+}
+arr2.push(arr[arr.length-1])
+return arr2.join(" ")
+}
+
   // Your code here
 }
+
+
+
+let rudePerson2 = interrupter("yo"); // => returns a function
+console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
