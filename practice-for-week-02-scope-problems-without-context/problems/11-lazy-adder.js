@@ -3,8 +3,24 @@ Write a function named: lazyAdder(firstNum). The lazyAdder function will
 accept a number and return a function. When the function returned by lazyAdder
 is invoked it will again accept a number, (secondNum), and then return a function.
 When the last mentioned function is invoked with a number, (thirdNum), it will
-FINALLY return a number. See below for examples!
+FINALLY return a number. See below for examples!*/
 
+
+function lazyAdder(firstNum) {
+
+  return function(secondNum) {
+
+    return function(thirdNum) {
+return firstNum + secondNum + thirdNum 
+  }
+  }
+
+}
+
+
+
+
+/*
 Example 1:
 let firstAdd = lazyAdder(1);
 let secondAdd = firstAdd(2);
@@ -22,9 +38,7 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-function lazyAdder(firstNum) {
-  // Your code here
-}
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
