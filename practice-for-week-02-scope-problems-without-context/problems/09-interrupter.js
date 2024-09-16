@@ -33,11 +33,6 @@ return arr2.join(" ")
   // Your code here
 }
 
-
-
-let rudePerson2 = interrupter("yo"); // => returns a function
-console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = interrupter;
