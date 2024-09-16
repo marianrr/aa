@@ -11,6 +11,33 @@ sumArray([1, 2, 3, 4, 5]); // 15
 ***********************************************************************/
 
 // your code here
+
+
+
+
+
+// const sumArray = (arr) => {
+//   debugger
+//   let n = arr.length-1
+//   let sum = 0
+// if(arr.length === 0) return []
+
+// while(n >= 1) {
+//   return arr[n] + sumArray()
+// }
+// if(n === 0) return arr[0]
+
+// }
+
+
+
+
+// sumArray([1, 2, 3]); //  6
+// sumArray([0, 1, -3]); //  -2
+// sumArray([1, 2, 3, 4, 5]); // 15
+
+
+
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

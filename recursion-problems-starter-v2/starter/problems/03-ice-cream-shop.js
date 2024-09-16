@@ -12,6 +12,14 @@ iceCreamShop(['moose tracks'], 'moose tracks'); // true
 iceCreamShop([], 'honey lavender'); // false
 ***********************************************************************/
 
+// const iceCreamShop = (flavors, favorite) => {
+
+// while(flavors.length !== 0) {
+// if(flavors[0] !== favorite) return iceCreamShop(flavors.slice(1), favorite)
+// else return true
+// }
+
+// }
 
 // your code here
 
