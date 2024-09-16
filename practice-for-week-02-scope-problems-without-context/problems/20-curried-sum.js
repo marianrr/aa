@@ -43,7 +43,13 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 ***********************************************************************/
 
 function curriedSum(numArgs) {
-  // Your code here
+const numbers = []
+return function coco(num) {
+  numbers.push(num)
+if(numArgs === numbers.length) return numbers.reduce((acc,num) => acc+num, 0)
+ else  return coco
+}
+
 }
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
