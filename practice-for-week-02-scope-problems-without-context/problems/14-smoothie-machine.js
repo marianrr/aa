@@ -15,11 +15,17 @@ console.log(smoothie1("honey", "pears", "berries"));
 let smoothie2 = smoothieMachine("apples", "bananas", "berries");
 console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"*/
+
 const smoothieMachine = (...ingredients) => {
+  var os = "I'm having a smoothie "
   //debugger
-let os = [...ingredients]
+  if(ingredients.length !== 0) {
+ os+= "with " + [...ingredients].join(" and ")
+  }
 return function(...s) {
-return `I'm having a smoothie with `+ os.join(" ") + [...s].join(" ")
+  if(!os.includes("with")) os+= "with " + [...s].join(" and ") 
+else os+= " and " + [...s].join(" and ")
+    return os
 }
 };
 
