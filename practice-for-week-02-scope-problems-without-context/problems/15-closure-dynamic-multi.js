@@ -13,10 +13,10 @@ const multiplyByFive = dynamicMultiply(5);
 multiplyByFive(5); // returns 25*/
 
 function dynamicMultiply(num) {
-  let ones= num
+  let ones= [num]
  
-return function() {
-  ones.push(ones)
+return function(num2) {
+  ones.push(num2)
  if(ones.length === 2)
   return ones[0] * ones[1]
 }
