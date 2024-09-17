@@ -1,10 +1,21 @@
 /***********************************************************************
 Write a recursive function reverse(string) that takes in a string and returns
-it reversed.
+it reversed. */
 
-Examples:
 
-reverse("house"); // "esuoh"
+const reverse = (string) => {
+debugger
+if(string.length === 0) return ""
+if(string.length-1 === 0) return string[0]
+
+return string[string.length-1] + reverse(string.slice(0,string.length-1))
+
+  }
+
+  /*
+  Examples:
+  reverse("house"); // "esuoh"
+
 reverse("dog"); // "god"
 reverse("atom"); // "mota"
 reverse("q"); // "q"
