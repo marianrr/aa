@@ -2,8 +2,18 @@
 Write a recursive function `iceCreamShop(flavors, favorite)` that takes in an
 array of ice cream flavors available at the ice cream shop, as well as the
 user's favorite ice cream flavor. Recursively find out whether or not the shop
-offers their favorite flavor.
+offers their favorite flavor.*/
 
+
+const iceCreamShop = (flavors, favorite) => {
+  
+  
+  
+  
+  
+  
+  }
+/*
 Examples:
 iceCreamShop(['vanilla', 'strawberry'], 'blue moon'); // false
 iceCreamShop(['pistachio', 'green tea', 'chocolate', 'mint chip'], 'green tea'); // true
