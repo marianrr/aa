@@ -11,8 +11,13 @@ given number of times:
 Negative exponents represent the same action, but in the denominator instead
 of the numerator:
 
-4^-3 = (1/4) * (1/4) * (1/4) = 1/64.
+4^-3 = (1/4) * (1/4) * (1/4) = 1/64.*/
 
+
+
+  
+
+/*
 Examples:
 
 exponent(3, 2); // 9
@@ -20,10 +25,7 @@ exponent(2, -2); // 1/4 (or 0.25)
 exponent(5, 5); // 3125
 ***********************************************************************/
 
-function exponent(b, n) {
-  // your code here
-}
-  
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = exponent;
