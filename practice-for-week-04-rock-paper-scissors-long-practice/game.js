@@ -31,7 +31,7 @@ function printHelp() {
 // letters.forEach(letter => console.log(`  Type '${letter}' for Rock`);)
 
 
-    //console.log("\nHelp:\n");
+    
     console.log("  Type 'r' for Rock");
     console.log("  Type 'p' for Paper");
     console.log("  Type 's' for Scissors");
@@ -70,7 +70,8 @@ return cpu
 }
 
 function processMove(cmd, cpu) {
-  // Your code here
+  console.log(`You pick ${cmd}, computer picks ${cpu}.`); 
+  getWinner(cmd, cpu)
 }
 
 /******************************* MAIN FUNCTION *******************************/
@@ -79,7 +80,10 @@ function promptInput(rl) {
   rl.question('> ', (cmd) => {
     cmd = cmd.toLowerCase();
 
-    if (cmd === 'h') printHelp()
+    if (cmd === 'h') {
+      console.log("\nHelp:\n");
+      printHelp()
+    }
       
       else if (cmd === 'q') {
       rl.close();
@@ -88,17 +92,13 @@ function promptInput(rl) {
 
       getCPUMove()
 
-      console.log(`You pick ${cmd}, computer picks ${cpu}.`);
-
+      
+processMove(cmd, cpu)
       getWinner(cmd, cpu)
 
     } else {
       console.log("\nInvalid command.\n");
-      console.log("  Type 'r' for Rock");
-      console.log("  Type 'p' for Paper");
-      console.log("  Type 's' for Scissors");
-      console.log("  Type 'q' to quit");
-      console.log("  Type 'h' for a list of valid commands\n");
+      printHelp()
     }
 
     promptInput(rl);
@@ -112,11 +112,7 @@ function initializeGame() {
     output: process.stdout
   });
   console.log("Welcome to Rock/Paper/Scissors\n");
-  console.log("  Type 'r' for Rock");
-  console.log("  Type 'p' for Paper");
-  console.log("  Type 's' for Scissors");
-  console.log("  Type 'q' to quit");
-  console.log("  Type 'h' for a list of valid commands\n");
+  printHelp()
 
   promptInput(rl);
 }
