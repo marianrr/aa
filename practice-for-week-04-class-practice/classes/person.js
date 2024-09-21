@@ -14,7 +14,7 @@ class Person {
 static introducePeople(persons) {
 if(Array.isArray(persons) == false) throw new Error("introducePeople only takes an array as an argument.")
 return persons.map(elem => {
-  if(elem instanceof Person) return elem.introduce()
+  if(elem instanceof Person)  return elem.introduce()
 throw new Error("All items in array must be Person class instances.")
 })
 
