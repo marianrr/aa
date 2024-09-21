@@ -12,7 +12,20 @@ const Person = require('./person');
 
 
 
+class Teacher extends Person {
+  constructor(firstName, lastName, subject, yearsOfExperience) {
+    super(firstName, lastName)
+this.subject = subject
+this.yearsOfExperience = yearsOfExperience
+  }
 
+static combinedYearsOfExperience(teachers) {
+let sum1 = [...teachers].reduce((sum, num) => sum + num.yearsOfExperience, 0)
+ return sum1
+
+}
+
+}
 
 
 
