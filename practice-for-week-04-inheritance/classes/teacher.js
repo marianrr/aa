@@ -20,7 +20,7 @@ this.yearsOfExperience = yearsOfExperience
   }
 
 static combinedYearsOfExperience(teachers) {
-let sum1 = [...teachers].reduce((sum, num) => sum + num.yearsOfExperience, 0)
+let sum1 = teachers.reduce((sum, num) => sum + num.yearsOfExperience, 0)
  return sum1
 
 }
