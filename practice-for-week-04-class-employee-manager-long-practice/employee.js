@@ -1,13 +1,13 @@
 class Employee {
 
-constructor(name, salary, title, manager) {
+constructor(name, salary, title, manager = null) {
 this.name = name
-this.salary - salary
+this.salary = salary
 this.title = title
-this.manager = null
+this.manager = manager
 
 }
 
 }
 
-module.exports = {Employee}
+module.exports = Employee
