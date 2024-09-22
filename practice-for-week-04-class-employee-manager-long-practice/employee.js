@@ -13,6 +13,11 @@ this.manager = manager
 }
 }
 
+calculateBonus(multiplier) {
+    const bonus = this.salary * multiplier
+    return bonus
+}
+
 }
 
 module.exports = Employee

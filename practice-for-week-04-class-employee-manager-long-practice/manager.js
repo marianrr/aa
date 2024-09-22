@@ -9,7 +9,11 @@ this.employees = employees
         this.employees.push(employee)
     }
 
-
+    calculateBonus(multiplier) {
+        const sum = employees.reduce((sum, num) => sum+num.salary, 0)
+        const bonus = this.salary * multiplier
+        return bonus
+    }
     
 }
 
