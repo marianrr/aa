@@ -6,6 +6,11 @@ this.salary = salary
 this.title = title
 this.manager = manager
 
+  // If a manager is provided, add this employee to the manager's employees array
+
+  if (manager) {
+    manager.addEmployee(this);
+}
 }
 
 }
