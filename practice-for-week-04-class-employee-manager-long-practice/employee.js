@@ -6,9 +6,12 @@ class Employee {
     this.manager = manager
     if(manager) manager.addEmployee(this)
   
-  
     }
 
+    calculateBonus(multiplier) {
+      const bonus = (this.salary) * multiplier
+      return bonus
+    }
 
 }
 
