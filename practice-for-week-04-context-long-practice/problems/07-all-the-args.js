@@ -1,6 +1,11 @@
 function allTheArgs(func, ...args) {
-  // Your code here
+  return function(...newArgs) {
+    return func(...args, ...newArgs);
+  };
 }
+
+
+
 
 /*****************************************************************************/
 /***************** DO NOT MODIFY ANYTHING UNDER THIS LINE ********************/
