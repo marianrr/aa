@@ -1,13 +1,24 @@
 // Your code here
 
 class Calculator {
-	 
-total = 0
-	
-add = num => this.total - num
-substract = num => this.total-num
-divide = num => this.total/num
-multiply = num => this.total*num
+	total = 0
+
+	add = num => {
+		this.total = this.total + num
+		return this.total
+	}
+	subtract = num => {
+		this.total = (this.total) - num
+		return this.total
+	}
+	divide = num => {
+		this.total = this.total / num
+		return this.total
+	}
+	multiply = num => {
+		this.total = this.total * num
+		return this.total
+	}
 
 }
 
