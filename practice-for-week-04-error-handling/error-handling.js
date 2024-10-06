@@ -16,9 +16,23 @@ catch(e) {
 }
 // 2.
 // tests
-sayName("Alex");
-sayName(1);
+
 // Your code here
+
+const sayName = name => {
+  if(typeof name !== 'string')  throw new Error("Invalid name! Must be a string!")
+    else console.log(name)
+    
+}
+
+try{
+  sayName("Alex");
+  sayName(1);
+  
+}
+catch(error) {
+  console.error("The error is: ", error.name, "------", error.message)
+}
 
 // 3.
 function greet(greeting) {
