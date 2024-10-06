@@ -10,8 +10,7 @@ try {
 
 let res = sum(null);
 console.log(res);
-}
-catch(e) {
+} catch(e) {
   console.error("Eroarea este: ", e.name, e.message)
 }
 // 2.
@@ -29,8 +28,7 @@ try{
   sayName("Alex");
   sayName(1);
   
-}
-catch(error) {
+} catch(error) {
   console.error("The error is: ", error.name, "------", error.message)
 }
 
@@ -41,4 +39,11 @@ function greet(greeting) {
   }
 
   console.log(greeting);
+}
+
+try{
+greet()
+} catch(e) {
+console.error("The error is: ", e.name, "**********", e.message)
+console.log("Hello World!")
 }
