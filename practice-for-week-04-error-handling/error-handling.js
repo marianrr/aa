@@ -1,5 +1,6 @@
 // 1.
-function sum(array) {
+try {
+  function sum(array) {
   let sum = 0;
   for (let i = 0; i < array.length; i++) {
     sum += array[i];
@@ -9,7 +10,10 @@ function sum(array) {
 
 let res = sum(null);
 console.log(res);
-
+}
+catch(e) {
+  console.error("Eroarea este: ", e.name, e.message)
+}
 // 2.
 // tests
 sayName("Alex");
