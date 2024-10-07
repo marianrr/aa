@@ -1,13 +1,22 @@
+
 function isFive(num) {
-  // Your code here
+  if(num === 5) return true
+  return false
 }
 
 function isOdd(number) {
-  // Your code here
+if(typeof number !== "number") throw new Error("Error")
+  if( number%2 === 0) return false
+  return true
+
+
 }
 
 function myRange(min, max, step = 1) {
-  // Your code here
+ 
+
+
+
 }
 
 
