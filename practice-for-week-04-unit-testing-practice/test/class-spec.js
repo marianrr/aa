@@ -48,7 +48,7 @@ expect(word.removeConsonants()).to.equal("eeeu")
   describe("pigLatin function", function () {
     it("should return the word converted to pig latin", function () {
       //expect.fail("replace with your code");
-
+expect(word.pigLatin()).to.equal("ebdeveuway")
 
 
     });
