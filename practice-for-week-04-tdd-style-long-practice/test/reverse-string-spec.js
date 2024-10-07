@@ -10,6 +10,8 @@ describe("function that reverse a string", function() {
         expect(reverseString("fun")).to.equal("nuf")
     })
 
-
+it('should throw a TypeError if type of "string" is not a string', function(){
+    expect(() => {reverseString({})}).to.throw(TypeError)
+})
 
 })
