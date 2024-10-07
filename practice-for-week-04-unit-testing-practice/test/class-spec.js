@@ -40,7 +40,7 @@ expect(word.removeVowels()).to.equal("wbdv")
     it("should return the word with the consonants removed", function () {
       //expect.fail("replace with your code");
 
-
+expect(word.removeConsonants()).to.equal("eeeu")
 
     });
   });
