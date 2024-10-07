@@ -6,7 +6,7 @@ function returnsThree() {
 function reciprocal(n) {
   // Your code here
 
-if(n === 0) throw new TypeError("this is an error, should not happening!")
+if(n <1 || n > 1_000_000) throw new RangeError("this is an error, should not happening!")
 return n**(-1)
 }
 
