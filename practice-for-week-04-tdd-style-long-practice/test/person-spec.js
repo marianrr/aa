@@ -27,7 +27,9 @@ it("should return the passed-in person instance", function(){
     expect(person1.visit(person2)).to.equal("Mai visited Erin")
 })
 
-
+it("should return visit('otherPerson')", function(){
+    expect(switchVisit(person2)).to.equal(visit(person2))
+})
 
 
 
