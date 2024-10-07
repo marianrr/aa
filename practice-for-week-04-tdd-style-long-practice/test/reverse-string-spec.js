@@ -3,7 +3,7 @@ const chai = require("chai")
 const expect = chai.expect
 const reverseString = require("../problems/reverse-string.js")
 
-describe("function that reverse a string", function() {
+describe("2. function that reverse a string", function() {
 
    
     it("should return nuf string", function() {
