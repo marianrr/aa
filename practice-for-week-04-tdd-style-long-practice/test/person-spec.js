@@ -3,7 +3,7 @@ const expect = chai.expect
 const Person = require("../problems/person.js")
 
 describe('3. Person class', function() {
-let Person
+
 beforeEach(() => {
     let person = new Person("Clau", 40)
     let person2 = new Person("Erin", 20)
@@ -54,7 +54,17 @@ it("should update properties", function(){
     expect(() => person.update({age: 88})).to.throw(TypeError)
 })
 
+it("should update properties", function(){
+    expect(() => person.tryUpdate(person2)).to.equal("true")
+})
 
+it("should update properties", function(){
+    expect(() => person.tryUpdate([])).to.equal("false")
+})
+
+it("should an array of obj instances", function() {
+    expect([person, person2, person3]).to.equal(["Clau , bine ai venit in IT!!!", "Erin , bine ai venit in IT!!!", "Marian , bine ai venit in IT!!!"])
+})
 
 
 })
