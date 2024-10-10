@@ -2,16 +2,19 @@ const chai = require("chai")
 const expect = chai.expect
 const Person = require("../problems/person.js")
 
+
+
+
 describe('3. Person class', function() {
 
-beforeEach(() => {
-    let person = new Person("Clau", 40)
-    let person2 = new Person("Erin", 20)
-    let person3 = new Person("Marian", 33)
-})
+    beforeEach(() => {
+         person = new Person("Clau", 40)
+         person2 = new Person("Erin", 20)
+         person3 = new Person("Marian", 33)
+    })
 
 it("should have the properties name and age", function(){
-    expect(person).to.have.allkeys('name', 'age')
+    expect(person).to.have.all.keys('name', 'age')
 })
 it("should have the properties name and age", function(){
     expect(person.name).to.equal('Clau')
@@ -30,7 +33,7 @@ it("should return the passed-in person instance", function(){
 })
 
 it("should return visit('otherPerson')", function(){
-    expect(person.switchVisit(person3)).to.equal("Clau visited Marian")
+    expect(person.switchVisit(person3)).to.equal("Marian visited Clau")
 })
 
 it("should update properties", function(){
