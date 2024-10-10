@@ -38,10 +38,21 @@ it("should update properties", function(){
 })
 
 it("should update properties", function(){
-    expect(person.update({ name: "lulu", age: 57 })).to.have.all.keys({ name: "lulu", age: 57 })
+    expect(person.update({ name: "zaza", age: 66 })).to.have.all.keys({ name: "zaza", age: 66 })
+})
+
+it("should update properties", function(){
+    expect(() => person.update([])).to.throw(TypeError)
 })
 
 
+it("should update properties", function(){
+    expect(() => person.update({name: "dj"})).to.throw(TypeError)
+})
+
+it("should update properties", function(){
+    expect(() => person.update({age: 88})).to.throw(TypeError)
+})
 
 
 
