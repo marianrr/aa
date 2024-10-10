@@ -1,6 +1,6 @@
 const chai = require("chai")
 const expect = chai.expect
-const {Triangle, Scalene} = require("../problems/triangle.js")
+const {Triangle, Scalene, Isosceles} = require("../problems/triangle.js")
 
 describe("Triangle class", function(){
 
@@ -71,3 +71,32 @@ it("should add an isValidScalene property to Scalene class", function(){
 
 
 })
+
+
+describe("isosceles class", function(){
+    let isosceles, isosceles2, isosceles3
+    beforeEach(function(){
+        isosceles = new Isosceles(10,20,30)
+        isosceles2 = new Isosceles(22, 22, 66)
+        isosceles3 = new Isosceles(50, 60, 70)
+    })
+    
+    it("should have constructor", function(){
+        expect(isosceles.side1).to.equal(10)
+        expect(isosceles.side2).to.equal(20)
+        expect(isosceles.side3).to.equal(30)
+    })
+    
+    it("should return if is a valid scalene triangle", function(){
+        expect(isosceles.isIsosceles()).to.be.false
+        expect(isosceles2.isIsosceles()).to.be.true
+    })
+    it("should add an isValidScalene property to Scalene class", function(){
+        isosceles3.validate()
+        isosceles2.validate()
+        expect(isosceles2.isValidIsosceles).to.be.true
+        expect(isosceles3.isValidIsosceles).to.be.false
+    })
+    
+    
+    })

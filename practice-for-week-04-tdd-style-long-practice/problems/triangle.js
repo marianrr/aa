@@ -48,11 +48,30 @@ validate(){
 
 
 
+class Isosceles extends Triangle {
+    constructor(side1, side2, side3) {
+        super(side1, side2, side3)
+        this.isValidIsosceles = false
+    }
+
+
+    isIsosceles() {
+        if((this.side1 === this.side2) || (this.side2 === this.side3) || (this.side1 === this.side3)) return true
+        return false
+    }
+    
+    validate(){
+        if(this.isIsosceles()) this.isValidIsosceles = true
+        else this.isValidIsosceles = false
+    }
+
+
+
+}
 
 
 
 
 
 
-
-module.exports = { Triangle, Scalene }
+module.exports = { Triangle, Scalene, Isosceles }
