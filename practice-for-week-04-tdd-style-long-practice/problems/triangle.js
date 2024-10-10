@@ -27,4 +27,4 @@ static getValidTriangles(coco) {
 }
 
 
-module.exports = Triangle
+module.exports = { Triangle, Scalene }

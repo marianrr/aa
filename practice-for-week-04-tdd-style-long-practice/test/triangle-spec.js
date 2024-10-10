@@ -1,6 +1,6 @@
 const chai = require("chai")
 const expect = chai.expect
-const Triangle = require("../problems/triangle.js")
+const {Triangle, Scalene} = require("../problems/triangle.js")
 
 describe("Triangle class", function(){
 
@@ -36,6 +36,28 @@ it("should add an isValid property to constructor", function(){
 it("should return all the instances of valid triangles", function(){
     expect(Triangle.getValidTriangles([triangle, triangle2])).to.deep.equal([triangle2])
 })
+
+
+
+
+})
+
+
+
+describe("Scalene class", function(){
+let scalene, scalene2, scalene3
+beforeEach(function(){
+    scalene = new Scalene(10,20,30)
+    scalene2 = new Scalene(22, 22, 66)
+    scalene3 = new Scalene(50, 60, 70)
+})
+
+it("should have constructor", function(){
+    expect(scalene.side1).to.equal(10)
+    expect(scalene.side2).to.equal(20)
+    expect(scalene.side3).to.equal(30)
+})
+
 
 
 
