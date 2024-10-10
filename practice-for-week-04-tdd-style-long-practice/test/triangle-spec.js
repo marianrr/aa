@@ -58,8 +58,16 @@ it("should have constructor", function(){
     expect(scalene.side3).to.equal(30)
 })
 
-
-
+it("should return if is a valid scalene triangle", function(){
+    expect(scalene.isScalene()).to.be.true
+    expect(scalene2.isScalene()).to.be.false
+})
+it("should add an isValidScalene property to Scalene class", function(){
+    scalene3.validate()
+    scalene2.validate()
+    expect(scalene2.isValidScalene).to.be.false
+    expect(scalene3.isValidScalene).to.be.true
+})
 
 
 })

@@ -27,4 +27,32 @@ static getValidTriangles(coco) {
 }
 
 
+class Scalene extends Triangle {
+    constructor(side1,side2,side3) {
+        super(side1, side2, side3)
+        this.isValidScalene = false
+    }
+
+isScalene() {
+    if((this.side1 !== this.side2) && (this.side2 !== this.side3) && (this.side1 !== this.side3)) return true
+    return false
+}
+
+validate(){
+    if(this.isScalene()) this.isValidScalene = true
+    else this.isValidScalene = false
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
 module.exports = { Triangle, Scalene }
