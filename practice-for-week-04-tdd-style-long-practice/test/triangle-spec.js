@@ -4,7 +4,7 @@ const Triangle = require("../problems/triangle.js")
 
 describe("Triangle class", function(){
 
-
+let triangle, triangle2
 beforeEach(function(){
     triangle = new Triangle(10, 20, 30)
     triangle2 = new Triangle(21, 20, 30)
