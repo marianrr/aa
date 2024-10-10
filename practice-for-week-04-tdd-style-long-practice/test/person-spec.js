@@ -36,12 +36,14 @@ it("should return visit('otherPerson')", function(){
     expect(person.switchVisit(person3)).to.equal("Marian visited Clau")
 })
 
-it("should update properties", function(){
-    expect(person.update({ name: "lulu", age: 57 })).to.equal({ name: "lulu", age: 57 })
+it("should update properties with lulu", function(){
+    person.update({ name: "lulu", age: 57 })
+    expect(person.name).to.equal("lulu")
 })
 
 it("should update properties", function(){
-    expect(person.update({ name: "zaza", age: 66 })).to.have.all.keys({ name: "zaza", age: 66 })
+    person.update({ name: "zaza", age: 66 })
+    expect(person).to.have.all.keys({ name: "zaza", age: 66 })
 })
 
 it("should update properties", function(){
@@ -65,7 +67,7 @@ it("should update properties", function(){
     expect(() => person.tryUpdate([])).to.equal("false")
 })
 
-it("should an array of obj instances", function() {
+it("should return an array of obj instances", function() {
     expect([person, person2, person3]).to.equal(["Clau , bine ai venit in IT!!!", "Erin , bine ai venit in IT!!!", "Marian , bine ai venit in IT!!!"])
 })
 
