@@ -8,12 +8,17 @@ this.side3 = side3
         return this.side1+this.side2+this.side3
     }
 
+    hasValidSideLengths() {
+        if((this.side1+this.side2 > this.side3) && (this.side1+this.side3 > this.side2) && (this.side2+this.side3 > this.side1)) return true
+    return false
+    }
+
+    validate(){
+        
+    }
 
 
 
-
-
-    
 
 }
 
