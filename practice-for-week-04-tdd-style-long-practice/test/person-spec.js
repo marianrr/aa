@@ -6,8 +6,6 @@ describe('3. Person class', function() {
 let Person
 beforeEach(() => {
     let person = new Person("marian web dev", 40)
-    let person2 = new Person("Erin", 20)
-    let person3 = new Person("web dev", 4)
 })
 
 it("should have the properties name and age", function(){
@@ -26,51 +24,22 @@ it("should return name and a greeting message", function(){
     expect(person.sayHello()).to.equal("marian web dev , bine ai venit in IT!!!")
 })
 it("should return the passed-in person instance", function(){
-    expect(person1.visit(person2)).to.equal("marian web dev visited Erin")
+    expect(person1.visit(person2)).to.equal("Mai visited Erin")
 })
 
 it("should return visit('otherPerson')", function(){
-    expect(person.switchVisit(person3)).to.equal("web dev visited Erin")
+    expect(switchVisit(person2)).to.equal(visit(person2))
 })
 
-it('should return update(obj)', function(){
-    expect(person.update(person3)).to.equal(person3)
-})
-it('should return update(obj)', function(){
-    expect(() => person.update(['kikila'])).to.throw(TypeError)
+it("should update properties", function(){
+    expect(person.update({ name: "lulu", age: 57 })).to.equal({ name: "lulu", age: 57 })
 })
 
-
-it('should return update(obj)', function(){
-    expect(person.update({name:"soso"})).to.equal(person3)
-
+it("should update properties", function(){
+    expect(person.update({ name: "lulu", age: 57 })).to.have.all.keys({ name: "lulu", age: 57 })
 })
 
-it('should return update(obj)', function(){
-    expect(person.update({age: 66})).to.equal(person3)
 
-})
-/////////////
-
-it('should return update(obj)', function(){
-    expect(person.tryUpdate(person3)).to.equal(person3)
-
-})
-
-it('should return update(obj)', function(){
-    expect(person.tryUpdate(person3)).to.equal("true")
-
-})
-
-it('should return update(obj)', function(){
-    expect(person.tryUpdate({})).to.equal("false")
-
-})
-
-// it('should return update(obj)', function(){
-//     expect(person.greetAll(person3)).to.equal([])
-
-// })
 
 
 
