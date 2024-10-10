@@ -34,12 +34,8 @@ it("should add an isValid property to constructor", function(){
 })
 
 it("should return all the instances of valid triangles", function(){
-    expect(Triangle.getValidTriangles(triangle, triangle2)).to.deep.equal(["triangle"])
+    expect(Triangle.getValidTriangles([triangle, triangle2])).to.deep.equal([triangle2])
 })
-
-
-
-
 
 
 

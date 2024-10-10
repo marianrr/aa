@@ -3,6 +3,7 @@ class Triangle {
 this.side1 = side1
 this.side2 = side2
 this.side3 = side3
+this.isValid = false
     }
     getPerimeter() {
         return this.side1+this.side2+this.side3
@@ -14,10 +15,13 @@ this.side3 = side3
     }
 
     validate(){
-        
+        if(this.hasValidSideLengths()) this.isValid = true
+        else this.isValid = false
     }
 
-
+static getValidTriangles(coco) {
+    return coco.filter(elem => elem.hasValidSideLengths())
+}
 
 
 }
