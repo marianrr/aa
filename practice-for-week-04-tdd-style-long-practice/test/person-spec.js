@@ -60,15 +60,16 @@ it("should update properties", function(){
 })
 
 it("should update properties", function(){
-    expect(() => person.tryUpdate(person2)).to.equal("true")
+    expect(person.tryUpdate(person2)).to.be.true
 })
 
 it("should update properties", function(){
-    expect(() => person.tryUpdate([])).to.equal("false")
+    expect(person.tryUpdate([])).to.be.false
 })
 
 it("should return an array of obj instances", function() {
-    expect([person, person2, person3]).to.equal(["Clau , bine ai venit in IT!!!", "Erin , bine ai venit in IT!!!", "Marian , bine ai venit in IT!!!"])
+  const b =  ["Clau , bine ai venit in IT!!!", "Erin , bine ai venit in IT!!!", "Marian , bine ai venit in IT!!!"]
+    expect(Person.greetAll([person, person2, person3])).to.deep.equal(b)
 })
 
 

@@ -27,9 +27,21 @@ this.age = obj.age
 }
 
 tryUpdate(obj) {
-
-    
+    try {
+        this.update(obj);
+        return true;
+    } catch (error) {
+        return false;
+    }
 }
+
+
+
+
+static greetAll(arr) {
+    return arr.map(elem => `${elem.name} , bine ai venit in IT!!!`)
+}
+
 
 }
 
