@@ -1,19 +1,19 @@
 class DynamicArray {
 
-  constructor(defaultSize=4) {
+  // constructor(defaultSize=4, arr) {
 
-    // Your code here
+  //   this.arr = arr
 
   }
 
   read(index) {
-
-    // Your code here
+return arr
+    
   }
 
   unshift(val) {
 
-    // Your code here
+    
   }
 
 }
