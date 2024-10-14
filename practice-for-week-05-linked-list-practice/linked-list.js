@@ -7,15 +7,18 @@ class LinkedListNode {
 
 class LinkedList {
   constructor() {
-    // Your code here
+    this.head = null
+    this.length = 0
   }
 
   addToHead(val) {
-    // Your code here
+    const node1 = new LinkedListNode(val)
+    node1.next = this.head
+    
   }
 
   addToTail(val) {
-    // Your code here
+    
   }
 
   // You can use this function to help debug
