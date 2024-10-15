@@ -14,11 +14,23 @@ class LinkedList {
   addToHead(val) {
     const node1 = new LinkedListNode(val)
     node1.next = this.head
-    
+    this.head = node1
+    this.length++
   }
 
   addToTail(val) {
     
+let node2 = new LinkedListNode(val)
+let current = this.head
+if(!this.head) { this.head = node2 }
+else {
+while(current.next) {
+  current = current.next
+}
+current.next = node2
+}
+this.length++
+
   }
 
   // You can use this function to help debug
@@ -27,7 +39,7 @@ class LinkedList {
 
     while (current) {
       process.stdout.write(`${current.value} -> `);
-      current = current.next;
+      current.next = node2;
     }
 
     console.log("NULL");
