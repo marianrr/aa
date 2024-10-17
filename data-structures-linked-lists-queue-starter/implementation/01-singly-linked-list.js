@@ -43,7 +43,7 @@ class SinglyLinkedList {
 
         let curr = this.head;
         while (curr.next) {
-            curr = current.next;
+            curr = curr.next;
         }
         curr.next = newNode;
         this.length++
@@ -52,7 +52,13 @@ class SinglyLinkedList {
 
     removeFromHead() {
         // Remove node at head
-
+if(!this.head) return undefined
+else {
+    const dd = this.head
+    this.head = this.head.next
+    this.length--
+    return dd
+}
         
 
 
@@ -60,21 +66,50 @@ class SinglyLinkedList {
     }
 
     removeFromTail() {
-        // Remove node at tail
+        if (!this.head) return undefined;
 
-        // Write your hypothesis on the time complexity of this method here
+        if (this.length === 1) {
+            const removedNode = this.head;
+            this.head = null;
+            this.length--;
+            return removedNode;
+        }
+
+        let current = this.head;
+        let prev = null;
+
+        while (current.next) {
+            prev = current;
+            current = current.next;
+        }
+
+        prev.next = null;
+        this.length--;
+
+        return current;
     }
 
     peekAtHead() {
         // Return value of head node
-
+        if(!this.head) return undefined
+return this.head.value
         // Write your hypothesis on the time complexity of this method here
     }
 
     print() {
-        // Print out the linked list
-
-        // Write your hypothesis on the time complexity of this method here
+        
+if(!this.head) return undefined
+let sss = ["2"]
+let current = this.head
+while(current) {
+sss.push(current.value)
+    current = current.next
+}
+sss[5] = "kk"
+console.log(sss[1])
+console.log(sss[2])
+console.log(sss[3])
+console.log(sss[4])
     }
 }
 
