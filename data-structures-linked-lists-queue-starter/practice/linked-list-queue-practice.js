@@ -30,6 +30,20 @@ class SinglyLinkedList {
     }
 
     listLength() {
+if(!this.head) return 0
+else {
+    let num = 0
+    let curr = this.head
+    while(curr) {
+num++
+curr = curr.next
+    }
+    return num
+}
+
+
+
+
         // Returns the length of the list
         // Implement in O(n) and in O(1) time complexity
     }
@@ -38,18 +52,64 @@ class SinglyLinkedList {
         // Returns the sum of the values of all the nodes
 
         // Write your hypothesis on the time complexity of this method here
+
+        if(!this.head) return 0
+        else {
+            let curr = this.head
+            let sum = 0
+            while(curr) {
+                sum += curr.value
+                curr = curr.next
+            }
+            return sum
+        }
+
+
+
     }
 
     averageValue() {
         // Returns the average value of all the nodes
 
         // Write your hypothesis on the time complexity of this method here
+
+if(!this.head) return 0
+else {
+let curr = this.head
+let num = 0
+let sum = 0
+while(curr) {
+    num++
+    sum += curr.value
+    curr = curr.next
+}
+
+return sum/num
+
+
+}
+
+
+
     }
 
     findNthNode(n) {
         // Returns the node at the nth index from the head
 
         // Write your hypothesis on the time complexity of this method here
+
+let num = 0
+let curr = this.head 
+while(curr) {
+    
+    if(num === n) return curr
+    num++
+    curr = curr.next
+}
+
+return null
+
+
     }
 
     findMid() {
@@ -58,12 +118,42 @@ class SinglyLinkedList {
             // How do the implementation for singly and doubly vary if at all?
 
         // Write your hypothesis on the time complexity of this method here
+
+        if(!this.head) return 0
+        else {
+            let num = 0
+            let curr = this.head
+            while(curr) {
+        num++
+        curr = curr.next
+            }
+            let num2 = 1
+            let curr2 = this.head
+            while(curr2) {
+                if(num2 === Math.ceil(num/2)) return curr2
+                curr2 = curr2.next
+                num2++
+
+
+        }
     }
+
+    }
+        
+    
 
     reverse() {
         // Returns a new reversed version of the linked list
 
         // Write your hypothesis on the time complexity of this method here
+
+
+
+
+
+
+
+        
     }
 
     reverseInPlace() {
