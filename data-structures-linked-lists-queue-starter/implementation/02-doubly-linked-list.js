@@ -15,15 +15,11 @@ class DoublyLinkedList {
     }
 
     addToHead(val) {
-        // There are bugs in this method! Fix them!!!
-        // Write your hypothesis on the time complexity of this method here
-
-        // Add node of val to head of linked list
         let node = new DoublyLinkedNode(val);
 
         if (this.head) {
             node.next = this.head
-            this.head.next = node
+            this.head.prev = node
             this.head = node
 
         }
@@ -38,12 +34,20 @@ class DoublyLinkedList {
 
     addToTail(val) {
         // Add node of val to tail of linked list
-        let newNode = new DoublyLinkedNode(val);
+        let node = new DoublyLinkedNode(val);
 
+        if (this.head) {
+            node.prev = this.tail
+            this.tail.next = node
+            this.tail = node
 
+        }
+        else {
 
+            this.head = this.tail = node
+        }
 
-
+        this.length++
 
         // Write your hypothesis on the time complexity of this method here
     }
