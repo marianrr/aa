@@ -12,8 +12,8 @@ class HashTable {
 
   constructor(numBuckets = 4) {
     // Your code here
+this.numBuckets = numBuckets
 
-this.data = [null, null, null, null]
 
 
   }
