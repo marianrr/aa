@@ -143,25 +143,31 @@ return null
     
 
     reverse() {
-        // Returns a new reversed version of the linked list
-
-        // Write your hypothesis on the time complexity of this method here
-
-
-
-
-
-
-
-        
+        let prev = null;
+        let current = this.head;
+        while (current) {
+          let next = current.next;
+          current.next = prev;
+          prev = current;
+          current = next;
+        }
+        const reversedList = new SinglyLinkedList();
+        reversedList.head = prev;
+        return reversedList;
+      }
+    
+      reverseInPlace() {
+        let prev = null;
+        let current = this.head;
+        while (current) {
+          let next = current.next;
+          current.next = prev;
+          prev = current;
+          current = next;
+        }
+        this.head = prev;
+      }
     }
-
-    reverseInPlace() {
-        // Reverses the linked list in-place
-
-        // Write your hypothesis on the time complexity of this method here
-    }
-}
 
 class DoublyLinkedNode {
     constructor(val) {
