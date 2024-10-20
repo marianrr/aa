@@ -30,7 +30,10 @@ return hashValue
   }
 
   insertNoCollisions(key, value) {
-    // Your code here
+    
+
+
+    
   }
 
   insertWithHashCollisions(key, value) {
