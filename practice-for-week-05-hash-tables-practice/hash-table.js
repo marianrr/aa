@@ -10,22 +10,23 @@ class KeyValuePair {
 
 class HashTable {
 
-  constructor(numBuckets = 4, count, data, capacity, length) {
+  constructor(numBuckets = 4) {
     // Your code here
-this.count = count 
-this.data = data 
-this.capacity = capacity 
-this.length = length
+this.capacity = numBuckets
+this.data = new Array(this.capacity).fill(null)
 
-
+this.count = 0
   }
 
   hash(key) {
-    // Your code here
+    const co =  sha256(key).slice(0,8)
+    let hashValue = parseInt(co, 16)
+
+return hashValue
   }
 
   hashMod(key) {
-    // Your code here
+    return this.hash(key)%this.capacity
   }
 
   insertNoCollisions(key, value) {
