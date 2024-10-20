@@ -10,10 +10,12 @@ class KeyValuePair {
 
 class HashTable {
 
-  constructor(numBuckets = 4) {
+  constructor(numBuckets = 4, count, data, capacity, length) {
     // Your code here
-this.numBuckets = numBuckets
-
+this.count = count 
+this.data = data 
+this.capacity = capacity 
+this.length = length
 
 
   }
