@@ -1,0 +1,71 @@
+html, body {
+    /* DO NOT EDIT */
+    font-family: sans-serif;
+}
+
+/* Phase 1 */
+
+#logo {
+    /* DO NOT EDIT */
+    vertical-align: bottom;
+width: 30px;
+height: 30px;
+margin-bottom: 5px;
+    /* Your code here */
+}
+
+
+h1 {
+    /* Your code here */
+    display: inline;
+}
+
+/* Phase 2 */
+
+.box {
+    /* DO NOT EDIT */
+    vertical-align: top;
+    
+
+    /* Your code here */
+    border: dotted black 4px;
+    background-color: yellowgreen;
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+}
+
+.alternate {
+    /* Your code here */
+height: 112px;
+    width: 112px;
+}
+
+/* Phase 3 */
+
+.footer {
+    /* DO NOT EDIT */
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.quote {
+    /* DO NOT EDIT */
+    background-color: lightgray;
+    font-size: larger;
+width: fit-content;
+margin: 10px auto;
+padding: 40px;
+
+    /* Your code here */
+}
+
+.attribution {
+    /* DO NOT EDIT */
+    font-style: italic;
+display: block;
+    /* Your code here */
+}
