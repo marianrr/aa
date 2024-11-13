@@ -1,48 +1,51 @@
-// Insertion Sort out-of-place
-// Do not modify the original array
-function insertionSort(arr) {
-  const sorted = [];
-  const original = [...arr]; // Copy the original array
+function outOfPlaceInsertionSort(arr) {
+  // Create a new empty array to hold the sorted elements
+  const sortedArray = [];
+  
+  // Go through each element in the original array
+  for (let i = 0; i < arr.length; i++) {
+    const current = arr[i];
+    let j = 0;
 
-  while (original.length > 0) {
-    console.log(sorted.join(',')); // Log the current state of the sorted array
-    const value = original.pop(); // Pop a value from the original array
-    let i = sorted.length - 1; // Start from the end of the sorted array
-
-    while (i >= 0 && sorted[i] > value) {
-      sorted[i + 1] = sorted[i]; // Shift the value to the right by 1
-      i--;
+    // Find the correct position to insert the current element
+    while (j < sortedArray.length && sortedArray[j] < current) {
+      j++;
     }
 
-    sorted[i + 1] = value; // Insert the unsorted value at the break point
+    // Insert the current element into the sorted array
+    sortedArray.splice(j, 0, current);
   }
 
-  return sorted;
+  return sortedArray;
 }
 
-// In-place Insertion Sort
-// Mutates the original array
-function insertionSortInPlace(array) {
-  let i = 1; // Set a pointer dividing the array into sorted and unsorted halves
+// Example usage
+const originalArray = [4, 2, 7, 1, 3];
+const sortedArray = outOfPlaceInsertionSort(originalArray);
 
-  if (array.length < 2) {
-    return array;
-  }
+console.log("Original Array:", originalArray);
+console.log("Sorted Array:", sortedArray);
 
-  while (i < array.length) {
-    const valueToInsert = array[i]; // Grab the first value from the unsorted half
-    let j = i - 1; // Start from the divider
+function inPlaceInsertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let current = arr[i];
+    let j = i - 1;
 
-    while (j >= 0 && array[j] > valueToInsert) {
-      array[j + 1] = array[j]; // Shift the value to the right by 1
+    // Shift elements of arr[0..i-1], that are greater than current,
+    // to one position ahead of their current position
+    while (j >= 0 && arr[j] > current) {
+      arr[j + 1] = arr[j];
       j--;
     }
 
-    array[j + 1] = valueToInsert; // Insert the unsorted value at the break point
-    i++; // Increment the dividing pointer
+    // Place the current element at its correct position
+    arr[j + 1] = current;
   }
 
-  return array;
+  return arr; // The original array is now sorted
 }
 
-module.exports = [insertionSort, insertionSortInPlace];
+// Example usage
+const array = [4, 2, 7, 1, 3];
+inPlaceInsertionSort(array);
+console.log("Sorted Array:", array);
