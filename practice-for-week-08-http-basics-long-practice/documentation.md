@@ -95,7 +95,7 @@ Content-Type: text/html
 Response components:
 - Status code: 302 found
 - Headers: 
-Content-Type: application/x-www-form-urlencoded
+Content-Type: 
 - Body: html page with new product
 
 ### Submit a new product
@@ -130,7 +130,7 @@ Request components:
 Response components:
 - Status code: 
 - Headers:
-- Body: 
+- Body: application/x-www-form-urlencoded
 
 ### Ask for the edit product page
 
