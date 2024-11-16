@@ -26,13 +26,13 @@ function liftWeights() {
 }
 
 // refactor this function to handle Promises using async/await instead of
-  // .then and .catch
-function workout() {
-  stretch()
-    .then(runOnTreadmill)
-    .then(liftWeights)
-    .then(() => console.log("done working out"))
-    .catch((err) => console.log(err));
+// .then and .catch
+async function workout() {
+  await stretch()
+    await runOnTreadmill()
+    await liftWeights()
+    await cc = () => console.log("done working out")
+    await catch((err) => console.log(err));
 }
 
 /* ============================ TEST YOUR CODE ============================
@@ -43,8 +43,8 @@ output.
 
 
 workout();
-  // should print out the following:
-    // done stretching
-    // done running on treadmill
-    // done lifting weights
-    // done working out
+// should print out the following:
+// done stretching
+// done running on treadmill
+// done lifting weights
+// done working out
