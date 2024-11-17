@@ -1,17 +1,24 @@
 function stretch() {
-  // Your code here
+  return new Promise((resolve, reject) => {
+    function resolve() {
+      setTimeout(() => {}, 1000)
+    }
+    function reject()  {
+
+    }
+  })
 }
 
 function runOnTreadmill() {
-  // Your code here
+  
 }
 
 function liftWeights() {
-  // Your code here
+  
 }
 
 function workout() {
-  // Your code here
+  
 }
 
 
