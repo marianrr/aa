@@ -10,6 +10,21 @@ Paste your code for fetch requests here once you finish each task.
 */
 
 // Your code here
+// const url = "/posts"
+// const body = { message: "kikila" }
+// headers = {
+//   "Content-Type": "application/json"
+// }
+// const options = {
+//   method: "GET",
+//   headers: headers,
+//   body: body
+// }
+// return fetch(url, options)
+// .then(res => res.json())
+// .then(data => console.log(data))
+
+
 
 
 
@@ -20,3 +35,17 @@ Paste your code for fetch requests here once you finish each task.
 */
 
 // Your code here
+
+const url = "/posts"
+const headers = { "Content-Type": "application/json"}
+const body = JSON.stringify({message: "kikila one two three"})
+const options = {
+  method: "POST",
+  headers: headers,
+  body: body
+}
+
+return fetch(url, options)
+
+
+
