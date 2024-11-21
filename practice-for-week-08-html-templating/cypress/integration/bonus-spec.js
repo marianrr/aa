@@ -53,13 +53,13 @@ describe("Bonus Phase 6: POST /dogs/:dogId", function () {
             .type("Second Dog Edit")
         cy.get(":nth-child(2) > input")
             .clear()
-            .type("000")
+            .type("555")
         cy.get("button[type='submit']").click()
 
         cy.get("body h1")
             .should("contain", "Second Dog Edit")
         cy.get("body div")
-            .should("contain", "Age: 000")
+            .should("contain", "Age: 555")
     })
 });
 
