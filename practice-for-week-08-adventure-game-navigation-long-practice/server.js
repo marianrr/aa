@@ -35,6 +35,14 @@ const server = http.createServer((req, res) => {
     /* ======================== ROUTE HANDLERS ========================== */
     // Phase 1: GET /
 
+
+
+
+
+
+
+
+    
     // Phase 2: POST /player
 
     // Phase 3: GET /rooms/:roomId

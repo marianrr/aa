@@ -1,0 +1,16 @@
+{
+  "name": "practice-for-week-08-adventure-game-navigation-long-practice",
+  "version": "1.0.0",
+  "description": "In this project, you will be creating UI through web pages for the Adventure\r Game that you created some weeks ago. At that time, the terminal was the UI and\r you could interact with the game through the terminal. This time, you will be\r creating a UI through creating a server with page navigations and form\r submissions.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
