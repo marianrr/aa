@@ -33,8 +33,18 @@ const server = http.createServer((req, res) => {
     }
 
     /* ======================== ROUTE HANDLERS ========================== */
+    console.log(req.method, req.url)
     // Phase 1: GET /
 
+if(req.method === "GET" && req.url === "/") {
+const file = fs.readFileSync("views/new-player.html", "utf8")
+const lol = file.replace("#{availableRooms}", world.availableRoomsToString())
+res.statusCode = 200
+res.setHeader("Content-Type", "text/html")
+return res.end(lol)
+
+
+}
 
 
 
@@ -42,7 +52,6 @@ const server = http.createServer((req, res) => {
 
 
 
-    
     // Phase 2: POST /player
 
     // Phase 3: GET /rooms/:roomId
@@ -57,4 +66,4 @@ const server = http.createServer((req, res) => {
 
 const port = 5000;
 
-server.listen(port, () => console.log('Server is listening on port', port));
+server.listen(port, () => console.log('Server is listening on port', port, "http://localhost:5000"));
