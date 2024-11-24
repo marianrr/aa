@@ -46,16 +46,26 @@ return res.end(lol)
 
 }
 
-
-
-
-
-
-
     // Phase 2: POST /player
+
+if(req.method === "POST" && req.url === "/player") {
+[player.name, player.startingRoom] = req.body
+req.statusCode = 302
+res.setHeader("Location", `/rooms/${request.body.roomId}`)
+return res.end()
+}
+
 
     // Phase 3: GET /rooms/:roomId
 
+
+
+
+
+
+
+
+    
     // Phase 4: GET /rooms/:roomId/:direction
 
     // Phase 5: POST /items/:itemId/:action
