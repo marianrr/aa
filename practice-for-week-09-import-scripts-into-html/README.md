@@ -30,7 +30,8 @@ Do NOT touch __app.js__. Instead, when you have finished importing, run
 and open the console to make sure the scripts were imported properly. You
 should see a thumbs up created by ASCII characters, like so:
 
-![result]
+![result]node app.js
+
 
 [starter]: https://github.com/appacademy/practice-for-week-09-import-scripts-into-html
 [localhost:5000]: http://localhost:5000
