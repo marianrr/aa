@@ -54,7 +54,7 @@ const server = http.createServer((req, res) => {
     // GET /dogs
     if (req.method === 'GET' && req.url === '/dogs') {
       // Your code here
-
+      res.write(JSON.stringify(dogs))
       return res.end();
     }
 
@@ -64,6 +64,8 @@ const server = http.createServer((req, res) => {
       if (urlParts.length === 3) {
         const dogId = urlParts[2];
         // Your code here
+        res.write(JSON.stringify(dogs.find(dog => dog.dogId === Number(dogId))))
+
       }
       return res.end();
     }
@@ -72,15 +74,27 @@ const server = http.createServer((req, res) => {
     if (req.method === 'POST' && req.url === '/dogs') {
       const { name, age } = req.body;
       // Your code here
+      const newDog = {
+        dogId: getNewDogId(),
+        name: name,
+        age: age
+      }
+      dogs.push(newDog)
+
+      res.write(JSON.stringify(newDog))
       return res.end();
     }
 
     // PUT or PATCH /dogs/:dogId
-    if ((req.method === 'PUT' || req.method === 'PATCH')  && req.url.startsWith('/dogs/')) {
+    if ((req.method === 'PUT' || req.method === 'PATCH') && req.url.startsWith('/dogs/')) {
       const urlParts = req.url.split('/');
       if (urlParts.length === 3) {
         const dogId = urlParts[2];
         // Your code here
+
+
+
+
       }
       return res.end();
     }
@@ -91,6 +105,11 @@ const server = http.createServer((req, res) => {
       if (urlParts.length === 3) {
         const dogId = urlParts[2];
         // Your code here
+
+
+
+
+        
       }
       return res.end();
     }
@@ -105,8 +124,8 @@ const server = http.createServer((req, res) => {
 
 
 if (require.main === module) {
-    const port = 8000;
-    server.listen(port, () => console.log('Server is listening on port', port));
+  const port = 8000;
+  server.listen(port, () => console.log('Server is listening on port', port));
 } else {
-    module.exports = server;
+  module.exports = server;
 }
