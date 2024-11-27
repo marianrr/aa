@@ -1,29 +1,29 @@
-function findElementById(id) {
+export function findElementById(id) {
     // Return the element in the DOM with corresponding `id`
-
+return document.getElementById(id)
     // Your code here
 }
 
-function findFirstElementOfTag(tag) {
+export function findFirstElementOfTag(tag) {
     // Return the first occurence of an element of tag name `tag`
-
+return document.getElementsByTagName(tag)[0]
     // Your code here
 }
 
-function findFirstElementOfClass(cls) {
+export function findFirstElementOfClass(cls) {
     // Return the first occurence of an element of class `cls`
-
+return document.getElementsByClassName(cls)[0]
     // Your code here
 }
 
-function findElementsOfTag(tag) {
+export function findElementsOfTag(tag) {
     // Return an array of elements that have a tag name of `tag`
-
+return document.getElementsByTagName(tag)
     // Your code here
 }
 
-function findElementsOfClass(cls) {
+export function findElementsOfClass(cls) {
     // Return an array of elements that have are of class `cls`
-
+return document.getElementsByClassName(cls)
     // Your code here
 }
