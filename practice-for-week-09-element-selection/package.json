@@ -1,0 +1,15 @@
+{
+  "name": "practice-for-week-09-element-selection",
+  "version": "1.0.0",
+  "description": "In this practice, you will practice selecting HTML elements using methods on the\r `window` object in the browser.",
+  "main": "selectors.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
