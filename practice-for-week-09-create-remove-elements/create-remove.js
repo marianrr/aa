@@ -10,6 +10,9 @@ add.addEventListener("click", async () => {
         /*--------------- Get breed (Hint: Parse from URL) ---------------- */
         // Your code here
 
+const breed = json.parse(url)
+//return breed
+
         /*------------ Create new dog card with the url above ------------- */
         /* (use the HTML structure for the current dog image in the index.html
             file to create a new image with the url) */
