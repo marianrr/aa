@@ -6,4 +6,18 @@ li {
     border-radius: 25px;
 }
 
-/* Your code here */
+li[data-type]:nth-child(5n+5) {
+    background-color: red;
+}
+li[data-type]:nth-child(5n+1) {
+    background-color: rgb(0, 255, 89);
+}
+li[data-type]:nth-child(5n+2) {
+    background-color: rgb(38, 0, 255);
+}
+li[data-type]:nth-child(5n+3) {
+    background-color: rgb(183, 185, 54);
+}
+li[data-type]:nth-child(5n+4) {
+    background-color: rgb(231, 55, 175);
+}
