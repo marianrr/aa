@@ -1,0 +1,16 @@
+{
+  "name": "practice-for-week-09-web-storage",
+  "version": "1.0.0",
+  "description": "In this practice, you will use the Web Storage API to store data on the browser\r for a web application.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
