@@ -1,0 +1,18 @@
+let a = ["one", "two", ["three", "two", ["three", "four"], "five", "four"], "five"];
+console.log(a)
+console.table(a)
+console.group(a)
+console.time()
+console.group("miau 1")
+console.group(a)
+console.group("miau 2")
+console.group(a)
+console.group("miau 3")
+console.group(a)
+console.groupEnd()
+console.group("miau 1")
+console.group(a)
+console.group("miau 2")
+console.log("%c Timpul este: ", "color:purple;")
+console.timeEnd()
+

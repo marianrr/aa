@@ -3,16 +3,24 @@
 // For storing user's theme selection in cookies
 function storeTheme(themeName) {
     // Your code here
+document.cookie = `theme1=${themeName}; expires=THU, 01 Jan 2028 00:00:00`
+
 }
 
 // For restoring theme from cookies, if selected by the user in the past
 function restoreTheme() {
     // Your code here
+
+    if(document.cookie) setTheme(document.cookie.split("=")[1])
+
 }
 
 // For clearing theme selection from cookies (reset to default)
 function clearTheme() {
-    // Your code here
+    // ambele metode
+    //document.cookie = "theme1=; expires=THU, 01 Jan 1970 00:00:00 GMT"
+    document.cookie = "theme1=; max-age=-22"
+
 }
 
 /* ================================ PHASE 3 ================================ */
