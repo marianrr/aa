@@ -1,50 +1,35 @@
-/* ================================ PHASE 1 ================================ */
+/* ============================== PHASE 1 + 2 ============================== */
 
-// For storing user's theme selection in the browser
+// For storing user's theme selection in cookies
 function storeTheme(themeName) {
     // Your code here
-
-window.localStorage.setItem("themeName1", themeName)
-
-
-
 }
 
-// For restoring theme, if selected by the user in the past
+// For restoring theme from cookies, if selected by the user in the past
 function restoreTheme() {
     // Your code here
-
-setTheme(window.localStorage.getItem("themeName1"))
-
 }
 
-// For clearing theme selection from the browser's storage (reset to default)
-
+// For clearing theme selection from cookies (reset to default)
 function clearTheme() {
-    window.localStorage.removeItem("themeName1");
+    // Your code here
 }
 
-/* ================================ PHASE 2 ================================ */
+/* ================================ PHASE 3 ================================ */
 
-// For storing user's display name
+// For storing user's display name in cookies
 function storeName(displayName) {
     // Your code here
-
-window.sessionStorage.setItem("name1", displayName)
-
 }
 
-// For restoring user's display name, if set in the past
+// For restoring user's display name from cookies, if set in the past
 function restoreName() {
     // Your code here
-if(window.sessionStorage.getItem("name1")) setInputValue('name1', window.sessionStorage.getItem("name1"))
-
 }
 
-// For clearing user's display name from browser storage
+// For clearing user's display name from cookies
 function clearName() {
     // Your code here
-    window.sessionStorage.clear()
 }
 
 /* ========================================================================= */

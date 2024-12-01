@@ -1,0 +1,16 @@
+{
+  "name": "practice-for-week-09-cookies",
+  "version": "1.0.0",
+  "description": "In this practice, you will use cookies to store data on the browser for a\r web application.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
