@@ -11,7 +11,7 @@ export default function PokeMoves() {
         {moves.map(item => {
           console.log(item)
           return(
-          <Coco key={i++} lol={item} />
+          <Coco key={i++} {...item} />
         )})}
       </ul>
 

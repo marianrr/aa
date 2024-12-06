@@ -1,8 +1,7 @@
-export default function PokeMoveCard(...props) {
-    console.log("propsul este: ", props, props.move, props.id)
+export default function PokeMoveCard({move}) {
     return (
 
-        <li>{props.move}</li>
+        <li>{move}</li>
 
 
     )
