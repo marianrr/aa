@@ -1,5 +1,5 @@
 import img from "./images/bulbasaur.jpg"
-
+import "./Showcase.css"
 
 function Showcase() {
 const favPokemon = "dj guga la felipa..."
@@ -10,9 +10,9 @@ const pokeCharacteristics = {
     return (
       <div>
         <h1>{favPokemon}'s Showcase Component</h1>
-        <img src={img} width="300" height="300" alt="miau" style={{margin:"50px"}}/>
+        <img src={img} />
         <h2>{pokeCharacteristics.type} --- {pokeCharacteristics.move}
-          <span style={{ backgroundColor:"green"}}> soto moto</span></h2>
+          <span> soto moto</span></h2>
       </div>
     );
   }

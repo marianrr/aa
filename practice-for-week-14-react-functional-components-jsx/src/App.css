@@ -1,0 +1,49 @@
+.background {
+
+    background: linear-gradient(
+    90deg,
+    hsla(77, 100%, 70%, 1) 0%,
+    hsla(206, 67%, 75%, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover; 
+  width: 100vw;
+  min-height: 100vh; 
+
+}
+
+.kikila {
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    border-radius: 10px;
+    animation: 4s infinite dojo
+}
+.kikila2 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(214, 192, 67);
+    border-radius: 50%;
+    margin-top: 20px;
+    align-content: center;
+    text-align: center;
+    animation: 6s infinite dojo2
+}
+
+@keyframes dojo {
+    from {
+        transform: translateX(40px)
+    }
+    to {
+        transform: translateX(1800px)
+    }
+}
+@keyframes dojo2 {
+    from {
+        transform: translateX(40px);
+        opacity: 0.5
+    }
+    to {
+        transform: translateX(1800px)
+    }
+}
